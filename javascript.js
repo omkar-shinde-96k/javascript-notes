@@ -565,7 +565,7 @@
                         // }
 
                 // location.href :
-                
+
                         // alert,confirm,propt are also part of BOM 
 
                         // alert(location.href);   // show current url
@@ -575,7 +575,7 @@
                         // }
 
 
-
+// updated ...
 
 
 
