@@ -20,7 +20,7 @@
 //         output = '';
 // }
 
-// 🔥🔥🔥🔥🔥🔥🔥Functions🔥🔥🔥🔥🔥🔥
+// 🔥🔥🔥🔥🔥🔥🔥JS Functions🔥🔥🔥🔥🔥🔥
 
 // function whatShallIWear(temp){
 //         if(temp<60){
@@ -34,16 +34,15 @@
 
 // whatShallIWear(444) 
 
-
+// --------------------------------------------------------------------------------------------------------------------------------
 // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🧡 Array 🧡🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+// --------------------------------------------------------------------------------------------------------------------------------
 
 // 1. 💖traverse of an array💖 
 
 // var fndList=["shreyas",20,"male","hanzala",18,true]
 
 // var list = ["omkar","shreyas", "swanand", "rahul" , "sanil" , "sahil", "suraj"];
-
-// console.log(list);
 
 // for (let index = 0; index < list.length; index++) {
 //         console.log(list[index]);
@@ -61,96 +60,236 @@
 // }
 
 // for each loop👇
-
-// list.forEach((element,index,array)=>{
-//         console.log(`elements : ${element}, index : ${index} , all data : ${array}`);
-// })
+//      var list = ["omkar","shreyas", "swanand", "rahul" , "sanil" , "sahil", "suraj"];
+//      const forEachValue = list.forEach((element,index,array)=>{
+//      console.log(`elements : ${element}, index : ${index} , all data : ${array}`);
+//      })
+//      console.log("your forEach returns : ",forEachValue);  // you can't return anything from forEach it default returns keyword 'undefined'
 
 // 2. searching and filter in Array 👇 :
+// var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "arahul"]
 
 //      i) array.prtotype.indexOf(💖):👇
 
-// Returns the first (least) elelment within the array equal to an element , -1 if none is found. it search the element from the 0th index number.
+//           Returns the first (least) elelment within the array equal to an element , -1 if none is found. it search the element from the 0th index number.
+// -------------------------------------------------------------------
 
-var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "arahul"]
+//          console.log(list.indexOf("rahul",3)); // serching start from 2nd argument  // Case sensitive // 2nd argument is optional
 
-// console.log(list.indexOf("rahul",3)); // serching start from 2nd argument  // Case sensitive
+//          console.log(list.lastIndexOf("rahul",3));
 
-// console.log(list.lastIndexOf("rahul",3))
+//          console.log(list.includes("swanand",2))     // return true or false //forword search // start checking from 2nd argument (index).
 
-// console.log(list.includes("swanand",2))     // return true or false //forword search
+// --------------------------- Array.prototype.lastIndexOf() ----------------------------------------
+
+// The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+
+// const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+
+// console.log(animals.lastIndexOf('Dodo'));
+// // expected output: 3
+
+// console.log(animals.lastIndexOf('Tiger'));
+// // expected output: 1
+
+// ------------------------------------------------------------------------------------
+
 
 //      ii) Array.prototype.find(💖) 👇  *******************
 
-// Only problem with find method it returns single value or undefine if not found
+//            Only problem with find method it returns single value or undefined if not found
 
-// const prices = [200,300,350,400,450,500,600]
+//            const prices = [200,300,350,400,450,500,600]
 
-// const Sortprices = prices.find((currVal)=>{
-//         if (currVal>350) {
+//            const Sortprices = prices.find((currVal)=>{
+//              if (currVal>350) {
 //                 return currVal
-//         }
-// })
+//              }    
+//            })
 
-// console.log(Sortprices);
-// console.log(prices);
+//          console.log(Sortprices);
+//          console.log(prices);
 
-//      iii) findIndex(💖) 👇 ************************
+// -------------------------------------------------------------------
 
-// Returns the found index in the array , if an element in the array satisfied the testing function, -1 if not found
+//      iii) **************** findIndex(💖) 👇 ************************
 
-// const pricesIndex = [200,300,350,400,450,500,600]
+//  Returns the found index in the array if an element in the array satisfied the testing function. -1 if not found
 
-// const SortpricesIndex = pricesIndex.findIndex((currVal)=>{
-//         return currVal > 410;
+//  const pricesIndex = [200,300,350,400,450,500,600]
+
+//  const SortpricesIndex = pricesIndex.findIndex((currVal)=>{
+//      return currVal > 410;
 //  })
 
 //  console.log(SortpricesIndex);
 
-//      iv) array.prototype.filter(💖) 👇 *******************
+// --------------------------- Array.prototype.findLast() ----------------------------------------
 
-// Returns a new array containing all elements of calling array for which the provided filtering function returns true else return empty array.
+// The findLast() method iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
 
-// const prices = [200,300,350,400,450,500,600]
+// const array1 = [5, 12, 50, 130, 44];
 
-// const data = prices.filter((currData)=>{
-//         return currData >= 400;
-// })
-// console.log(data);
+// const found = array1.findLast((element) => element > 45);
+
+// console.log(found);
+// // expected output: 130
+
+// -----------------------------------------------------------------------------
+
+//      iv) **************** array.prototype.filter(💖) 👇 *******************
+
+//       Returns a new array containing all elements of calling array for which the provided filtering function returns true else return empty array.
+
+//          const prices = [200,300,350,400,450,500,600]
+
+//          const data = prices.filter((currData)=>{
+//              return currData >= 400;
+//           })
+
+//          console.log(data);
+
+// ------------------------------- Array.prototype.findLastIndex() ------------------------------------
+
+// The findLastIndex() method iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned.
+
+// const arr = [5, 12, 50, 130, 44];
+
+// const isLargeNumber = (element) => element > 45;
+
+// console.log(arr.findLastIndex(isLargeNumber));
+// // expected output: 3
+// // Index of element with value: 130
+
+
+// ------------------------------- Array.prototype.flat() ------------------------------------
+
+// The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+// const arr1 = [0, 1, 2, [3, 4]];
+
+// console.log(arr1.flat());
+// // expected output: Array [0, 1, 2, 3, 4]
+
+// const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+// console.log(arr2.flat(2));
+// // expected output: Array [0, 1, 2, Array [3, 4]]
+
+// ------------------------------- Array.from()------------------------------------
+
+// The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+
+// console.log(Array.from('foo'));
+// // expected output: Array ["f", "o", "o"]
+
+// const arr = [1, 2, 3]
+
+// console.log(Array.from(arr, x => x + x));
+// // expected output: Array [2, 4, 6]
+
+
+// ------------------------------- Array.prototype.includes() ------------------------------------
+
+// const array1 = [1, 2, 3];
+
+// console.log(array1.includes(2));
+// // expected output: true
+
+// const pets = ['cat', 'dog', 'bat'];
+
+// console.log(pets.includes('cat'));
+// // expected output: true
+
+// console.log(pets.includes('at'));
+// // expected output: false
+
+// ------------------------------- Array.isArray() ------------------------------------
+// Array.isArray(value)
+
+// // all following calls return true
+// Array.isArray([]);
+// Array.isArray([1]);
+// Array.isArray(new Array());
+// Array.isArray(new Array("a", "b", "c", "d"));
+// Array.isArray(new Array(3));
+// // Little known fact: Array.prototype itself is an array:
+// Array.isArray(Array.prototype);
+
+// // all following calls return false
+// Array.isArray();
+// Array.isArray({});
+// Array.isArray(null);
+// Array.isArray(undefined);
+// Array.isArray(17);
+// Array.isArray("Array");
+// Array.isArray(true);
+// Array.isArray(false);
+// Array.isArray(new Uint8Array(32));
+// // This is not an array, because it was not created using the
+// // array literal syntax or the Array constructor
+// Array.isArray({ __proto__: Array.prototype });
+
+// ------------------------------- Array.prototype.join() ------------------------------------
+
+// The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string. If the array has only one item, then that item will be returned without using the separator.
+
+    // const elements = ['Fire', 'Air', 'Water'];
+
+    // console.log(elements.join());
+    // // expected output: "Fire,Air,Water"
+
+    // console.log(elements.join(''));
+    // // expected output: "FireAirWater"
+
+    // console.log(elements.join('-'));
+    // // expected output: "Fire-Air-Water"
+
+    // const str = "my name is omkar";
+
+    // console.log(str.split(" ").join("-"));
+    // // output :  my-name-is-omkar
+
+// ------------------------------- Array.prototype.join() ------------------------------------
 
 // 3. How to sort and compare an array :
 
 // i) Array.prototype.sort(🧡) :
 
-// The sort method sorts the elements of array in place and returns the sorted array. The default sort order is accending , build upon converting the elements into strings.
-// Then comparing their sequence of UTF-16 code units values.
+//      The sort method sorts the elements of array in place and returns the sorted array. The default sort order is accending , build upon converting the elements into strings. // uppercase has priority
+//      Then comparing their sequence of UTF-16 code units values.
 
-// const months = ["b","d","c","a","F","E","A"]
-
+// const months = ["b","d","c","a","F","E","A"];
 // console.log(months.sort());
 
-// However,if number are sorted as a strings,"25" is bigger then "100", becouse "2" is bigger then "1"
+// -------------------------------------------------------------------
 
-// const number = ["2","44","66","1000","7"]
+// However,if number are sorted as a strings,"25" is bigger then "100", becouse "2" is bigger then "1".
 
-// console.log(number.sort());
+//      const number = ["2","25","66","100","7","1"];
+
+//      console.log(number.sort());
+
+// -------------------------------------------------------------------
 
 // 4. CRUD operation : 👇
 
 // i) Array.prototype.push():
 
-// The push method adds one or more elements to the end of the array and returns the new length of array .
+//      The push method adds one or more elements to the end of the array and returns the new length of array.
 
-// const animals = ['dog','cat','sheep','tiger'];
+//  const animals = ['dog','cat','sheep','tiger'];
 
-// const count = animals.push('chicken');    // "chiken" add in array
-// console.log(count);                      // push returns length of new array
-// console.log(animals);                   // new array
+//  const count = animals.push('chicken');    // "chiken" add in array
+//  console.log(count);                      // push returns length of new array
+//  console.log(animals);                   // new array
 
-// const count2 = animals.push('lion','cow','monkey');  // multipal elements can add using push
+//  const count2 = animals.push('lion','cow','monkey');  // multipal elements can add using push
 
 // console.log(count2);
 // console.log(animals);
+
+// -------------------------------------------------------------------
 
 //      ii) Array.prototype.unshift() : 👇
 
@@ -161,6 +300,8 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // const count = animals.unshift('chicken');    // "chiken" adds beginning of array.
 // console.log(count);                         // unshift returns length of new array
 // console.log(animals);                      // new array
+
+// -------------------------------------------------------------------
 
 //      iii) Array.prototype.pop() : 👇
 
@@ -173,61 +314,160 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // console.log(count);            // pop returns removed element
 // console.log(animals);         // array after removing last element
 
+// -------------------------------------------------------------------
+
 //      iii) Array.prototype.shift() :👇
 
-// The shift method removes the first elelment from an array and returns that removed elements. This     method changes the length of the array.
+//          The shift method removes the first elelment from an array and returns that removed elements. This method changes the length of the array.
 
-// const animals = ['dog','cat','sheep','tiger'];
-// console.log(animals);
-// console.log(animals.shift())
-// console.log(animals);
+//             const animals = ['dog','cat','sheep','tiger'];
+//             console.log(animals);
+//             console.log(animals.shift())
+//             console.log(animals);
 
-//      Array.prototype.spilce() : 👇
+// -------------------------------------------------------------------
+
+//  Array.prototype.spilce() : 👇
 
 // Add and remove elements from array.
 
-// ****************** splice method challenge ***********************
+
+// const months = ['jan', 'march', 'april', 'june', 'july'];
 
 // 1. add Dec at end of the array using splice
+
+//  const newMonths = months.splice(months.length,0,'Dec')      // replaceble with push but returns empty array and push returns updated arr length.
+//  console.log(months)
+//  console.log("newMonths",newMonths)
+
+// ---------------------
+
 // 2. What is the return value of the splice method
+
+//          console.log(newMonths)  // splice method return empty array if add the element
+
+// ---------------------
+
 // 3. Update march to MARCH (update)
+
+//          const indexOfMonth = months.indexOf('march')
+//          if (indexOfMonth != -1) {
+//                  const updateMonths = months.splice(indexOfMonth,1,"MARCH")
+//                  console.log(months);
+//                  console.log(updateMonths);            // return updated element
+//          } else {
+//                  console.log("no such data found");
+//          }       
+
+// ---------------------
+
 // 4. Delete june from an array
 
-// const months = ['jan', 'march','april','june','july'];
+//      const indexOfMonth = months.indexOf('june')
+//      if (indexOfMonth != -1) {
+//              const updateMonths = months.splice(indexOfMonth,1)
+//              const updateMonths = months.splice(indexOfMonth,Infinity) // infinity deletes all data after june with june
+//              console.log(months);
+//              console.log(updateMonths);            // return deleted element
+//      } else {
+//             console.log("no such data found");
+//      }
 
-//sol 1 : ✔
+// ------------------------------ Array.at() 👇 -------------------------------------
 
-// const newMonths = months.splice(months.length,0,'Dec')
-// console.log(months)
+// The at() method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.
 
-//sol 2 : ✔
-// console.log(newMonths)  // splice method return empty array if add the element
+// const array1 = [5, 12, 8, 130, 44];
 
-//sol 3 : ✔
-// const indexOfMonth = months.indexOf('march')
-// if (indexOfMonth != -1) {
-//         const updateMonths = months.splice(indexOfMonth,1,"MARCH")
-//         console.log(months);
-//          console.log(updateMonths);            // return updated element
-// } else {
-//         console.log("no such data found");
+// let index = 2;
+
+// console.log(`Using an index of ${index} the item returned is ${array1.at(index)}`);
+// // expected output: "Using an index of 2 the item returned is 8"
+
+// index = -2;
+
+// console.log(`Using an index of ${index} item returned is ${array1.at(index)}`);
+// // expected output: "Using an index of -2 item returned is 130"
+
+
+// ------------------------------ Array.concat() 👇-------------------------------------
+
+//      The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array
+
+//      const array1 = ['a', 'b', 'c'];
+//      const array2 = ['d', 'e', 'f'];
+//      const array3 = array1.concat(array2);
+
+//      console.log(array3);
+
+//      expected output: Array ["a", "b", "c", "d", "e", "f"];
+
+// ---------------------------- Array.prototype.entries() ---------------------------------------
+
+// The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+
+// const array1 = ['a', 'b', 'c'];
+
+// ------- eg.1------
+
+
+// console.log(iterator1.next().value);
+// // expected output: Array [0, "a"]
+
+// console.log(iterator1.next().value);
+// // expected output: Array [1, "b"]
+
+// ------- eg.2- Iterating with index and element -----
+
+// const a = ["a", "b", "c"];
+
+// for (const [index, element] of a.entries()) {
+// console.log(index, element);
 // }
 
-//sol 4 : ✔
+// 0 'a'
+// 1 'b'
+// 2 'c'
 
-// const indexOfMonth = months.indexOf('june')
-// if (indexOfMonth != -1) {
-//         const updateMonths = months.splice(indexOfMonth,1)
-//         const updateMonths = months.splice(indexOfMonth,Infinity) // infinity deletes all data after june with june
-//         console.log(months);
-//         console.log(updateMonths);            // return deleted element
-// } else {
-//         console.log("no such data found");
-// }
+// ------- eg.3 - with Object ----- #imp
 
-//5. map()  : 👇    //array
+// const obj = {
+//     name: "omkar",
+//     age: "20",
+//     country: "india"
+// };
 
-// i). Array.prototype.map() :
+// Object.entries(obj).forEach(([key, value]) => {  // ES-8
+//     console.log("key:",key,"value:",value);
+// } );
+
+// key: name value: omkar
+// key: age value: 20
+// key: country value: india
+
+
+// ----------------------------- Array.prototype.fill() --------------------------------------
+
+// const array1 = [1, 2, 3, 4];
+
+// // Fill with 0 from position 2 until position 4
+// console.log(array1.fill("👇", 2, 4));
+// // expected output: Array [1, 2, 👇, 👇]
+
+// // Fill with 5 from position 1 until last ele
+// console.log(array1.fill(5, 1));
+// // expected output: Array [1, 5, 5, 5]
+
+// console.log(array1.fill(6));  // in all
+// // expected output: Array [6, 6, 6, 6]
+
+// ----------------------------- Array.prototype.fill() --------------------------------------
+
+// The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+
+//5. map() : 👇 //array
+
+// i). Array.prototype.map() :`
 
 // Returns a new array containing the results of calling a function on every element in this array.
 
@@ -257,7 +497,7 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // 2. map have ability to chain other methods eg.  ....}).reduce().filter()
 // 3. map have ability to update array element
 
-// ************************* map() challenge ***********************
+// ---------------------------- map() challenge ---------------------------------------
 
 // Que 1. Find the square root of each element in an array ?
 // Que 2. multiply Each element by 2 and return only those elements which are greater then 10
@@ -281,6 +521,8 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 
 // console.log(newArray);
 
+// ------------------------------ Array.reduce() -------------------------------------
+
 //7. Reduce(): 👇
 
 //The reduce method exicutes the reducer function (that you provide ) on each element of array , resulting the single output value.
@@ -294,7 +536,7 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // let array = [5,10,15,20]
 // var sum = 0;
 // let newArray = array.reduce((accumulator,currElem,index,array)=>{
-//         return accumulator = accumulator + currElem   ;
+//         return accumulator = accumulator + currElem ;
 // },0) // 5 is our initial value , means the initial value of accumulator is 5
 // console.log("newarry",newArray);
 
@@ -305,7 +547,37 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // console.log("num",num);
 // console.log(addi);
 
+// ------------------------------- Array.prototype.some() ------------------------------------ #imp
 
+// The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+
+// const array = [1, 2, 3, 4, 5];
+
+// // Checks whether an element is even
+// const even = (element) => element % 2 === 0;
+
+// console.log(array.some(even));
+// // expected output: true
+
+// ----------------------------- Array.prototype.every() -------------------------------------- #imp
+
+// The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+
+// const isAdult = (currentValue) => currentValue.age > 18;
+
+// const array1 = [1, 30, 39, 29, 10, 13];
+// const people = [
+//     {
+//         name: "omkar",
+//         age: 17,
+//     },
+//     {
+//         name: "aniket",
+//         age: 30,
+//     }
+// ]
+
+// console.log(people.every(isAdult));  // it will return 'true' if all people age is greter then 18
 
 
 // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🧡 Strings in Javascript 🧡🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -1437,10 +1709,5 @@ var list = ["omkar", "shreyas", "swanand", "rahul", "sanil", "sahil", "suraj", "
 // const mySet2 = new Set([1, 2, 3, 4])
 // const intersection = new Set([...mySet1].filter(x => mySet2.has(x)))
 // console.log(intersection);
-
-
-
-
-// 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥  🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
 
